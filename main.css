@@ -73,6 +73,8 @@ p {
     font-size: max(14px, 1em);
     line-height: 1.5em;
 }
+
+/* Buttons Start */
 button {
     font-family: RingsideCompressedSSm-Black;
     font-size: max(14px, 1.3em);
@@ -88,18 +90,26 @@ button {
 }
 .secondary {
     background-color: #FFF;
-    border: 3px solid #00313C;
+    border: 3px solid #FFBF3F;
+    /* border: 3px solid #BD472A; */
+    border-radius: 5px;
     color: #00313C;
+    /* color: #BD472A; */
 }
 .tertiary {
     background-color: #FFF;
     padding: .83em 0;
     color: #00313C;
+    /* color: #BD472A; */
     margin-top: -.4em;
+    min-width: 50px;
 }
+.secondary:hover {
+    background-color: #FFBF3F;
+}
+/* Buttons End */
 
 /* Breakpoints */
-
 @media (min-width: 48em){
     h1 {
         font-size:4.5em;
