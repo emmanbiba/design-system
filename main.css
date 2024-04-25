@@ -672,7 +672,6 @@ a.light-link:active {
 button {
   font-family: RingsideRegularSSm-Bold;
   min-width: 44px;
-  display: block;
 }
 button:hover {
   cursor: pointer;
@@ -838,41 +837,58 @@ button.secondary-button-dark:active {
 /* Factoid Cards End */
 
 /* Accordion Start */
-button.accordion-item {
-  background: #FFFAEF;
-  padding: 24px 24px;
-  margin-bottom: 8px;
+.accordion-group {
   width: 100%;
-  text-align: left;
 }
-.accordion-group :first-child {
+.accordion-group > :first-child {
   border-radius: 20px 20px 0 0;
 }
 .accordion-group > :last-child {
-  border-radius: 0 0 20px 20px;
+  border-radius:  0 0 20px 20px;
+}
+.accordion-item {
+  background: #FFFAEF;
+  padding: 0 24px;
+}
+.accordion-group > * {
+  margin-bottom: 8px;
+}
+.accordion-group > :last-child {
   margin-bottom: 0;
 }
 .accordion-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
   cursor: pointer;
-  position: relative;
-  padding-right: 24px;
 }
-.accordion-toggle .icon--chevron-down {
-  padding: 0;
-  position: absolute;
-  right: 24px;
-  top: 50%;
-  font-size: 16px;
+.icon--chevron {
+  transform: rotate(0deg);
 }
-.icon--chevron-down .icon {
-  height: 16px;
+.icon--chevron.rotated {
+  transform: rotate(180deg);
 }
-.icon--chevron-down {
-  height: 16px;
+.accordion-content {
+  display: none;
+  padding: 0 0 24px 0;
 }
-.icon i {
-  position: absolute;
-  top: calc(50% - 16px)
+.accordion-content p {
+  font-family: RingsideRegularSSm-Book;
+  margin-bottom: 16px;
+  line-height: 24px;
+  text-align: left;
+}
+.accordion-content.show {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.accordion-content .button-m {
+  display: none;
+}
+.accordion-content .button-m.show {
+  display: inline-block;
 }
 /* Accordion End */
 
