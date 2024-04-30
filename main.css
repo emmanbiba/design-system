@@ -910,11 +910,11 @@ select.dropdown__select {
   width: 200px;
 }
 .dropdown__select-wrapper i {
-  margin-right: 10px; /* Adjust margin to align the icon with the select text */
+  margin-right: 10px;
   position: absolute;
-  right: 10px; /* Adjust the right position to align the icon */
-  top: 50%; /* Align vertically in the middle */
-  transform: translateY(-50%); /* Adjust vertical alignment */
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   cursor: pointer;
 }
 .dropdown__select {
