@@ -521,6 +521,9 @@ h6, .h6 {
   position: absolute;
   background: #DA291C;
 }
+p {
+  line-height: 24px;
+}
 /* Typography Ends */
 
 /* Links Start */
@@ -767,11 +770,11 @@ button.secondary-button-dark:active {
 
 /* Tags Start */
 .tag {
-  font-family: RingsideSSm-Book;
+  font-family: RingsideRegularSSm-Book;
   font-size: 16px;
+  font-weight: 400;
   line-height: 24px;
-  padding: 0 8px;
-  margin: 8px 8px;
+  padding: 3px 8px;
   border-radius: 90px;
 }
 .beef {
@@ -1134,22 +1137,52 @@ div.bg-card-over-cream {
 /* Page Layout End */
 
 /* Cards Start */
-.product-card__group {
+.page-template {
+  margin: 50px 120px;
+}
+.content-block__heading {
   display: flex;
-  flex-direction: column;
-}
-.product-card__group > * {
-  margin-bottom: 16px;
-}
-.product-card__group > :last-child {
-  margin-bottom: 0;
-}
-.card {
-  background-color: #FFFAEF;
-  height: 100px;
-  width: 100%;
+  flex-direction: row;
+  align-items: top;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 32px;
+  max-width: 1200px;
 }
 
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 300px;
+}
+.product-card img {
+  width: 100%;
+}
+.protein-tags {
+  margin-bottom: 4px;
+}
+.product-card__details {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 16px 24px 16px;
+  height: 100%;
+  justify-content: space-between;
+}
+.product-card__details .product-title-l {
+  margin-bottom: 4px;
+}
+.product-card__price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.product-card__bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 24px;
+}
 /* Cards End */
 
 /* Footer Start */
@@ -1274,6 +1307,12 @@ footer {
   .factoid-card-group > :last-child {
     margin-right: 50px;
   }
+  .bg-cream {
+    margin: 24px 24px;
+  }
+  .content-block__heading .button-l {
+    display: none;
+  }
 }
 /* Mobile Breakpoints Ends */
 
@@ -1293,16 +1332,6 @@ footer {
   main {
     margin: 56px 60px;
   }
-  .product-card__group {
-    display: flex;
-    flex-direction: row;
-  }
-  .product-card__group > * {
-    margin-right: 16px;
-  }
-  .product-card__group > :last-child {
-    margin-right: 0;
-  }
   .product-details-bar {
     padding: 0 60px;
     height: 82px;
@@ -1320,6 +1349,16 @@ footer {
     display: flex;
   }
   .add-to-cart-button button.button-m {
+    display: none;
+  }
+  .product-card__group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 24px;
+  }
+  .content-block__heading .button-l {
     display: none;
   }
 }
@@ -1389,6 +1428,21 @@ footer {
   }
   .product-details-bar {
     padding: 0 120px;
+  }
+  .product-card__group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .content-block__heading .button-m {
+    display: none;
+  }
+  .content-block__heading .button-l {
+    display: flex;
   }
 }
 /* Small Desktop Breakpoint Ends */
